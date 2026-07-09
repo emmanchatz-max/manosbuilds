@@ -5,22 +5,18 @@ import {
   Building2,
   Camera,
   ConciergeBell,
+  Cross,
   Gavel,
   HeartPulse,
   Landmark,
   LayoutTemplate,
+  Microscope,
   MonitorSmartphone,
-  Music4,
-  Orbit,
-  Podcast,
-  Radio,
   ReceiptText,
-  ShieldCheck,
+  ServerCog,
   ShoppingBag,
   Sparkles,
-  Stethoscope,
   Store,
-  WandSparkles,
   Workflow,
 } from "lucide-react";
 
@@ -34,101 +30,119 @@ export const navigationItems = [
 
 export const services = [
   {
-    title: "Professional Websites",
+    title: "Premium Business Websites",
     description:
-      "Elegant business, hospitality, creator, and portfolio websites designed to build trust and make your brand feel premium online.",
+      "Elegant, trust-building websites for businesses, hospitality brands, and professionals who want to look exceptional online.",
     icon: LayoutTemplate,
+    label: "Primary Offer",
   },
   {
     title: "Custom Web Applications",
     description:
-      "Tailored software platforms, booking flows, internal tools, and business systems built around how your organization actually works.",
+      "Tailored booking flows, dashboards, portals, and internal tools designed around the way your business actually operates.",
     icon: MonitorSmartphone,
+    label: "Growth Layer",
   },
   {
     title: "AI Assistants",
     description:
-      "Practical AI systems that help you respond faster, automate communication, and support your business as it grows.",
+      "Useful AI systems that improve communication, reduce friction, and create smarter customer-facing or internal experiences.",
     icon: Sparkles,
+    label: "Smart Support",
   },
   {
     title: "Business Automation",
     description:
-      "Connected workflows that reduce repetitive work, improve consistency, and give your team more time for higher-value tasks.",
+      "Connected workflows that remove repetitive work and make day-to-day operations feel more consistent and efficient.",
     icon: Workflow,
+    label: "Efficiency",
   },
   {
-    title: "Hosting & Support",
+    title: "Digital Systems",
     description:
-      "Reliable deployment, updates, monitoring, and ongoing support so your digital presence stays polished and dependable.",
-    icon: ShieldCheck,
+      "Structured digital ecosystems that tie together websites, data, operations, communication, and future expansion.",
+    icon: Landmark,
+    label: "Infrastructure",
+  },
+  {
+    title: "Cloud Solutions",
+    description:
+      "Reliable deployment, hosting, architecture, and support that keep the final experience stable, fast, and polished.",
+    icon: ServerCog,
+    label: "Foundation",
   },
 ];
 
 export const heroHighlights = [
-  "Premium websites for businesses, professionals, and creators",
-  "Custom applications, AI assistants, and automation as your needs evolve",
-  "Luxury presentation with clean engineering and long-term support",
+  "Premium websites for modern businesses and professionals",
+  "Beautiful digital experiences that build trust and elevate perception",
+  "Applications, AI, automation, and cloud systems when the business is ready",
 ];
 
 export const capabilityCards = [
   {
     eyebrow: "Website First",
-    title: "Your online presence should feel as professional as the business behind it.",
+    title: "The first thing people should notice is how good your business looks online.",
     description:
-      "We lead with websites because they are often the first impression your clients experience, and first impressions define trust.",
+      "The website sets the tone for trust, pricing power, and perceived quality. It should feel like a premium experience before a single conversation starts.",
+    points: ["Luxury presentation", "Business credibility", "Stronger first impressions"],
   },
   {
     eyebrow: "Built To Grow",
-    title: "As your business grows, your digital tools should grow with it.",
+    title: "As the business grows, the digital experience expands with it.",
     description:
-      "From booking systems and custom applications to AI assistants and automation, the next layer of software feels like a natural extension.",
+      "Applications, AI assistants, booking systems, and automation should feel like a natural next step rather than disconnected add-ons.",
+    points: ["Booking systems", "Custom applications", "Practical AI and automation"],
   },
   {
     eyebrow: "Craftsmanship",
-    title: "Every detail should look considered, modern, and worth paying for.",
+    title: "Luxury comes from restraint, detail, and the way everything feels considered.",
     description:
-      "Spacing, motion, responsiveness, and atmosphere work together so the site feels closer to a luxury digital studio than a generic agency.",
+      "Spacing, hierarchy, motion, and responsiveness work together to create a handcrafted result that feels worth paying for.",
+    points: ["Editorial rhythm", "Refined motion", "Premium interaction detail"],
   },
 ];
 
 export const industries = [
-  { title: "Healthcare", icon: HeartPulse },
-  { title: "Legal", icon: Gavel },
-  { title: "Accounting", icon: ReceiptText },
-  { title: "Hospitality", icon: ConciergeBell },
+  { title: "Doctors", icon: HeartPulse },
+  { title: "Dentists", icon: Cross },
+  { title: "Lawyers", icon: Gavel },
+  { title: "Accountants", icon: ReceiptText },
+  { title: "Hotels", icon: ConciergeBell },
   { title: "Restaurants", icon: Store },
-  { title: "Retail", icon: ShoppingBag },
-  { title: "Artists", icon: WandSparkles },
-  { title: "Musicians", icon: Music4 },
-  { title: "Photographers", icon: Camera },
-  { title: "Radio Stations", icon: Radio },
-  { title: "Content Creators", icon: Podcast },
-  { title: "Corporate", icon: Building2 },
-  { title: "Startups", icon: Orbit },
+  { title: "Retail Stores", icon: ShoppingBag },
+  { title: "Premium Local Businesses", icon: Building2 },
+  { title: "Growing Companies", icon: Activity },
+  { title: "Professionals", icon: BriefcaseBusiness },
 ];
 
 export const portfolioItems = [
   {
     name: "Private Clinic",
-    type: "Professional Website",
+    type: "Healthcare Website",
     summary:
-      "A trust-first website for medical professionals with appointment flows, service breakdowns, and clear credibility cues.",
+      "A trust-first digital presence for medical professionals with appointment journeys, expertise cues, and elegant service storytelling.",
     accent: "from-sky-400/70 via-blue-500/40 to-violet-500/25",
+    category: "Healthcare",
+    metrics: ["Trust-first presentation", "Appointments", "Responsive luxury UI"],
   },
   {
     name: "Boutique Resort",
     type: "Hotel & Booking Experience",
     summary:
-      "A cinematic hospitality experience with premium visuals, room storytelling, and booking-oriented user journeys.",
+      "A cinematic hospitality experience with room storytelling, destination atmosphere, and premium booking-led presentation.",
     accent: "from-fuchsia-400/60 via-violet-500/40 to-sky-400/25",
+    category: "Hospitality",
+    metrics: ["Luxury visuals", "Booking flow", "Multi-device storytelling"],
   },
   {
-    name: "City Radio",
-    type: "Radio Platform",
+    name: "Legal Advisory",
+    type: "Professional Services Website",
     summary:
-      "A polished radio and media platform combining live playback, schedules, content sections, and brand depth.",
+      "A premium legal presence with high-trust structure, clear services, refined content hierarchy, and a calm authoritative tone.",
     accent: "from-blue-400/70 via-cyan-400/35 to-pink-500/25",
+    category: "Legal",
+    metrics: ["Authority cues", "Clear practice areas", "Premium conversion path"],
   },
 ];
 
@@ -173,13 +187,14 @@ export const processSteps = [
 
 export const proofPoints = [
   { label: "Business websites", icon: BriefcaseBusiness },
-  { label: "Portfolio websites", icon: Camera },
+  { label: "Professional websites", icon: Camera },
   { label: "Booking systems", icon: BadgeCheck },
   { label: "Restaurant websites", icon: Store },
   { label: "Hotel websites", icon: ConciergeBell },
-  { label: "Radio platforms", icon: Radio },
   { label: "Custom applications", icon: Activity },
-  { label: "AI assistants", icon: Stethoscope },
+  { label: "Legal websites", icon: Gavel },
+  { label: "Healthcare websites", icon: Microscope },
+  { label: "AI assistants", icon: Sparkles },
   { label: "Automation systems", icon: Workflow },
   { label: "Digital solutions", icon: Landmark },
 ];

@@ -3,6 +3,7 @@
 import { AtmosphereBackground } from "@/components/landing/AtmosphereBackground";
 import { ContactSection } from "@/components/landing/ContactSection";
 import { CursorGlow } from "@/components/landing/CursorGlow";
+import { FeatureEditorialSection } from "@/components/landing/FeatureEditorialSection";
 import { Header } from "@/components/landing/Header";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { IndustriesSection } from "@/components/landing/IndustriesSection";
@@ -23,6 +24,7 @@ export function LandingPage() {
         <main>
           <HeroSection pointer={pointer} />
           <ServicesSection />
+          <FeatureEditorialSection />
           <IndustriesSection />
           <PortfolioSection />
           <ProcessSection />

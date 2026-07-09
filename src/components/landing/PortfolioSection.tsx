@@ -52,8 +52,8 @@ export function PortfolioSection() {
     <SectionShell
       id="portfolio"
       eyebrow="Portfolio"
-      title="A premium showcase that makes visitors imagine their own brand here."
-      description="The work section is designed to feel cinematic and high-value, using polished mockups and interaction depth instead of flat case-study thumbnails."
+      title="A portfolio section that sells transformation, not just screens."
+      description="Every presentation is composed like a premium case-study teaser, using layered mockups and sector-specific framing to help visitors imagine their own brand at a higher level."
     >
       <div className="space-y-8">
         {portfolioItems.map((item, index) => (
@@ -65,8 +65,14 @@ export function PortfolioSection() {
             transition={{ duration: 0.8, delay: index * 0.08 }}
             className="overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6 shadow-[0_32px_100px_rgba(0,0,0,0.22)] backdrop-blur-2xl lg:p-8"
           >
-            <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
-              <div>
+            <div
+              className={`grid gap-8 lg:items-center ${
+                index % 2 === 0
+                  ? "lg:grid-cols-[0.8fr_1.2fr]"
+                  : "lg:grid-cols-[1.2fr_0.8fr]"
+              }`}
+            >
+              <div className={index % 2 === 0 ? "" : "lg:order-2"}>
                 <p className="text-xs uppercase tracking-[0.3em] text-sky-200/75">
                   {item.type}
                 </p>
@@ -76,17 +82,50 @@ export function PortfolioSection() {
                 <p className="mt-5 max-w-xl text-base leading-8 text-white/60">
                   {item.summary}
                 </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <span className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-2 text-xs uppercase tracking-[0.28em] text-white/62">
+                    {item.category}
+                  </span>
+                  {item.metrics.map((metric) => (
+                    <span
+                      key={metric}
+                      className="rounded-full border border-white/10 bg-white/[0.05] px-3 py-2 text-xs uppercase tracking-[0.22em] text-white/62"
+                    >
+                      {metric}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               <motion.div
                 whileHover={{ y: -4, scale: 1.01 }}
-                className={`rounded-[1.9rem] border border-white/10 bg-[linear-gradient(140deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-4 shadow-[0_25px_80px_rgba(0,0,0,0.22)]`}
+                className={`rounded-[1.9rem] border border-white/10 bg-[linear-gradient(140deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-4 shadow-[0_25px_80px_rgba(0,0,0,0.22)] ${
+                  index % 2 === 0 ? "" : "lg:order-1"
+                }`}
               >
                 <div
                   className={`rounded-[1.6rem] bg-gradient-to-br ${item.accent} p-5`}
                 >
-                  <div className="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
-                    <DeviceMockup label="Desktop" icon={Monitor} className="min-h-[14rem]" />
+                  <div className="grid gap-4 md:grid-cols-[1.18fr_0.82fr]">
+                    <div className="space-y-4">
+                      <DeviceMockup label="Desktop" icon={Monitor} className="min-h-[14rem]" />
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="rounded-[1.35rem] border border-white/10 bg-white/[0.1] p-4">
+                          <div className="text-[10px] uppercase tracking-[0.28em] text-white/44">
+                            Layout
+                          </div>
+                          <div className="mt-4 h-16 rounded-[1rem] bg-white/14" />
+                          <div className="mt-3 h-2 w-3/4 rounded-full bg-white/24" />
+                        </div>
+                        <div className="rounded-[1.35rem] border border-white/10 bg-white/[0.1] p-4">
+                          <div className="text-[10px] uppercase tracking-[0.28em] text-white/44">
+                            Brand tone
+                          </div>
+                          <div className="mt-4 h-16 rounded-[1rem] bg-[linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.04))]" />
+                          <div className="mt-3 h-2 w-2/3 rounded-full bg-white/24" />
+                        </div>
+                      </div>
+                    </div>
                     <div className="grid gap-4">
                       <DeviceMockup label="Laptop" icon={Laptop} className="min-h-[8rem]" />
                       <div className="grid grid-cols-2 gap-4">

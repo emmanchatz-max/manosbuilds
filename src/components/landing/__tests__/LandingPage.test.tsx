@@ -8,7 +8,7 @@ describe("LandingPage", () => {
 
     expect(
       screen.getByRole("heading", {
-        name: /beautiful websites\./i,
+        name: /premium websites/i,
       }),
     ).toBeInTheDocument();
 
@@ -22,10 +22,18 @@ describe("LandingPage", () => {
   it("renders the full service offering", () => {
     render(<LandingPage />);
 
-    expect(screen.getByText("Professional Websites")).toBeInTheDocument();
+    expect(screen.getByText("Premium Business Websites")).toBeInTheDocument();
     expect(screen.getByText("Custom Web Applications")).toBeInTheDocument();
     expect(screen.getByText("AI Assistants")).toBeInTheDocument();
     expect(screen.getByText("Business Automation")).toBeInTheDocument();
-    expect(screen.getByText("Hosting & Support")).toBeInTheDocument();
+    expect(screen.getByText("Digital Systems")).toBeInTheDocument();
+    expect(screen.getByText("Cloud Solutions")).toBeInTheDocument();
+  });
+
+  it("renders the editorial positioning section", () => {
+    render(<LandingPage />);
+
+    expect(screen.getByText("Website First")).toBeInTheDocument();
+    expect(screen.getByText(/the first thing people should notice/i)).toBeInTheDocument();
   });
 });

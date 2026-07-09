@@ -48,8 +48,19 @@ export function AtmosphereBackground({ pointer }: AtmosphereBackgroundProps) {
         <div className="absolute left-[10%] top-[22%] h-[30rem] w-[30rem] rounded-full bg-sky-500/10 blur-[140px]" />
         <div className="absolute right-[8%] top-[8%] h-[24rem] w-[24rem] rounded-full bg-violet-500/10 blur-[120px]" />
         <div className="absolute left-[42%] top-[58%] h-[26rem] w-[26rem] rounded-full bg-pink-500/8 blur-[120px]" />
+        <div className="absolute left-[28%] top-[36%] h-[20rem] w-[20rem] rounded-full bg-sky-400/8 blur-[120px]" />
         <div className="absolute left-[-8%] top-[6%] h-[140%] w-[22rem] rotate-12 bg-[linear-gradient(90deg,transparent,rgba(122,173,255,0.06),transparent)] blur-3xl" />
         <div className="absolute right-[8%] top-[-10%] h-[120%] w-[16rem] -rotate-12 bg-[linear-gradient(90deg,transparent,rgba(197,116,255,0.05),transparent)] blur-3xl" />
+        <motion.div
+          className="absolute left-[14%] top-[18%] h-[70%] w-40 rotate-[22deg] bg-[linear-gradient(90deg,transparent,rgba(130,186,255,0.08),transparent)] blur-3xl"
+          animate={reduceMotion ? undefined : { x: [0, 60, 0], opacity: [0.2, 0.45, 0.2] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute right-[12%] top-[32%] h-[54%] w-28 -rotate-[18deg] bg-[linear-gradient(90deg,transparent,rgba(255,130,214,0.08),transparent)] blur-3xl"
+          animate={reduceMotion ? undefined : { x: [0, -48, 0], opacity: [0.14, 0.34, 0.14] }}
+          transition={{ duration: 13, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+        />
       </motion.div>
 
       <svg
