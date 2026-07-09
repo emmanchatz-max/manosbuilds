@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #090909;
+  --background: #07111f;
   --foreground: #ffffff;
   --surface: rgba(255, 255, 255, 0.05);
   --border: rgba(255, 255, 255, 0.1);
-  --blue: #3b82f6;
-  --cyan: #22d3ee;
-  --purple: #8b5cf6;
+  --blue: #4f86ff;
+  --cyan: #55cbff;
+  --purple: #a458ff;
+  --pink: #ff4fa7;
 }
 
 @theme inline {
@@ -40,9 +41,10 @@ body::before {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at top, rgba(59, 130, 246, 0.12), transparent 28%),
-    radial-gradient(circle at 80% 20%, rgba(34, 211, 238, 0.08), transparent 24%),
-    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.08), transparent 22%);
+    radial-gradient(circle at top, rgba(79, 134, 255, 0.14), transparent 26%),
+    radial-gradient(circle at 80% 20%, rgba(85, 203, 255, 0.08), transparent 24%),
+    radial-gradient(circle at 20% 80%, rgba(164, 88, 255, 0.08), transparent 22%),
+    radial-gradient(circle at 70% 60%, rgba(255, 79, 167, 0.07), transparent 18%);
   z-index: 0;
 }
 

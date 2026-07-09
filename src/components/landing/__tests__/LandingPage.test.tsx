@@ -8,7 +8,7 @@ describe("LandingPage", () => {
 
     expect(
       screen.getByRole("heading", {
-        name: "Building the Future with Code & AI",
+        name: /beautiful websites\./i,
       }),
     ).toBeInTheDocument();
 
@@ -16,18 +16,16 @@ describe("LandingPage", () => {
       screen.getAllByRole("link", { name: /start your project/i }).length,
     ).toBeGreaterThan(0);
 
-    expect(screen.getByRole("link", { name: /view our work/i })).toBeInTheDocument();
+    expect(screen.getAllByRole("link", { name: /view our work/i }).length).toBeGreaterThan(0);
   });
 
   it("renders the full service offering", () => {
     render(<LandingPage />);
 
-    expect(screen.getByText("Custom Websites")).toBeInTheDocument();
-    expect(screen.getByText("Web Applications")).toBeInTheDocument();
-    expect(screen.getByText("AI Agents")).toBeInTheDocument();
-    expect(screen.getByText("AI Voice Assistants")).toBeInTheDocument();
+    expect(screen.getByText("Professional Websites")).toBeInTheDocument();
+    expect(screen.getByText("Custom Web Applications")).toBeInTheDocument();
+    expect(screen.getByText("AI Assistants")).toBeInTheDocument();
     expect(screen.getByText("Business Automation")).toBeInTheDocument();
-    expect(screen.getByText("API Integrations")).toBeInTheDocument();
-    expect(screen.getByText("Cloud Solutions")).toBeInTheDocument();
+    expect(screen.getByText("Hosting & Support")).toBeInTheDocument();
   });
 });

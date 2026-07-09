@@ -1,30 +1,32 @@
 "use client";
 
+import { AtmosphereBackground } from "@/components/landing/AtmosphereBackground";
+import { ContactSection } from "@/components/landing/ContactSection";
+import { CursorGlow } from "@/components/landing/CursorGlow";
 import { Header } from "@/components/landing/Header";
 import { HeroSection } from "@/components/landing/HeroSection";
+import { IndustriesSection } from "@/components/landing/IndustriesSection";
+import { PortfolioSection } from "@/components/landing/PortfolioSection";
 import { ServicesSection } from "@/components/landing/ServicesSection";
-import { CapabilitySection } from "@/components/landing/CapabilitySection";
 import { ProcessSection } from "@/components/landing/ProcessSection";
-import { WorkPreviewSection } from "@/components/landing/WorkPreviewSection";
-import { FinalCtaSection } from "@/components/landing/FinalCtaSection";
-import { NetworkBackground } from "@/components/landing/NetworkBackground";
 import { usePointerPosition } from "@/hooks/usePointerPosition";
 
 export function LandingPage() {
   const pointer = usePointerPosition();
 
   return (
-    <div className="relative overflow-hidden">
-      <NetworkBackground pointer={pointer} />
+    <div className="relative overflow-hidden bg-[#07111f]">
+      <AtmosphereBackground pointer={pointer} />
+      <CursorGlow pointer={pointer} />
       <div className="relative z-10">
         <Header />
         <main>
           <HeroSection pointer={pointer} />
           <ServicesSection />
-          <CapabilitySection />
+          <IndustriesSection />
+          <PortfolioSection />
           <ProcessSection />
-          <WorkPreviewSection />
-          <FinalCtaSection />
+          <ContactSection />
         </main>
       </div>
     </div>

@@ -1,130 +1,185 @@
 import {
-  Bot,
-  Cloud,
-  Code2,
-  Layers3,
-  MessageSquare,
+  Activity,
+  BadgeCheck,
+  BriefcaseBusiness,
+  Building2,
+  Camera,
+  ConciergeBell,
+  Gavel,
+  HeartPulse,
+  Landmark,
+  LayoutTemplate,
+  MonitorSmartphone,
+  Music4,
+  Orbit,
+  Podcast,
+  Radio,
+  ReceiptText,
+  ShieldCheck,
+  ShoppingBag,
   Sparkles,
+  Stethoscope,
+  Store,
+  WandSparkles,
   Workflow,
 } from "lucide-react";
 
 export const navigationItems = [
   { label: "Services", href: "#services" },
-  { label: "Approach", href: "#approach" },
+  { label: "Industries", href: "#industries" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "Process", href: "#process" },
-  { label: "Work", href: "#work" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const services = [
   {
-    title: "Custom Websites",
+    title: "Professional Websites",
     description:
-      "Editorial-grade websites designed to look exceptional, load fast, and convert with confidence.",
+      "Elegant business, hospitality, creator, and portfolio websites designed to build trust and make your brand feel premium online.",
+    icon: LayoutTemplate,
+  },
+  {
+    title: "Custom Web Applications",
+    description:
+      "Tailored software platforms, booking flows, internal tools, and business systems built around how your organization actually works.",
+    icon: MonitorSmartphone,
+  },
+  {
+    title: "AI Assistants",
+    description:
+      "Practical AI systems that help you respond faster, automate communication, and support your business as it grows.",
     icon: Sparkles,
-  },
-  {
-    title: "Web Applications",
-    description:
-      "Product-grade platforms built for speed, usability, and long-term business leverage.",
-    icon: Layers3,
-  },
-  {
-    title: "AI Agents",
-    description:
-      "Task-oriented AI systems that assist teams, automate workflows, and surface decisions faster.",
-    icon: Bot,
-  },
-  {
-    title: "AI Voice Assistants",
-    description:
-      "Natural voice experiences for intake, support, scheduling, and high-volume customer interactions.",
-    icon: MessageSquare,
   },
   {
     title: "Business Automation",
     description:
-      "Connected internal operations that remove manual work and turn repetitive processes into systems.",
+      "Connected workflows that reduce repetitive work, improve consistency, and give your team more time for higher-value tasks.",
     icon: Workflow,
   },
   {
-    title: "API Integrations",
+    title: "Hosting & Support",
     description:
-      "Reliable integrations between your products, payments, CRMs, and internal tools with clean data flow.",
-    icon: Code2,
+      "Reliable deployment, updates, monitoring, and ongoing support so your digital presence stays polished and dependable.",
+    icon: ShieldCheck,
   },
-  {
-    title: "Cloud Solutions",
-    description:
-      "Scalable cloud architecture, deployment workflows, and infrastructure that support modern growth.",
-    icon: Cloud,
-  },
+];
+
+export const heroHighlights = [
+  "Premium websites for businesses, professionals, and creators",
+  "Custom applications, AI assistants, and automation as your needs evolve",
+  "Luxury presentation with clean engineering and long-term support",
 ];
 
 export const capabilityCards = [
   {
-    eyebrow: "Design Precision",
-    title: "Elegant interfaces that make complex products feel simple.",
+    eyebrow: "Website First",
+    title: "Your online presence should feel as professional as the business behind it.",
     description:
-      "Every layout, transition, and interaction is tuned to create trust, clarity, and a premium first impression.",
+      "We lead with websites because they are often the first impression your clients experience, and first impressions define trust.",
   },
   {
-    eyebrow: "System Thinking",
-    title: "Software that connects beautifully to the way your business already works.",
+    eyebrow: "Built To Grow",
+    title: "As your business grows, your digital tools should grow with it.",
     description:
-      "We design around operations, not just pages, so your website, product, and internal workflows move together.",
+      "From booking systems and custom applications to AI assistants and automation, the next layer of software feels like a natural extension.",
   },
   {
-    eyebrow: "Applied AI",
-    title: "Automation and AI that create measurable leverage, not noise.",
+    eyebrow: "Craftsmanship",
+    title: "Every detail should look considered, modern, and worth paying for.",
     description:
-      "From agents to voice systems, we focus on AI that saves time, captures value, and scales with your team.",
+      "Spacing, motion, responsiveness, and atmosphere work together so the site feels closer to a luxury digital studio than a generic agency.",
+  },
+];
+
+export const industries = [
+  { title: "Healthcare", icon: HeartPulse },
+  { title: "Legal", icon: Gavel },
+  { title: "Accounting", icon: ReceiptText },
+  { title: "Hospitality", icon: ConciergeBell },
+  { title: "Restaurants", icon: Store },
+  { title: "Retail", icon: ShoppingBag },
+  { title: "Artists", icon: WandSparkles },
+  { title: "Musicians", icon: Music4 },
+  { title: "Photographers", icon: Camera },
+  { title: "Radio Stations", icon: Radio },
+  { title: "Content Creators", icon: Podcast },
+  { title: "Corporate", icon: Building2 },
+  { title: "Startups", icon: Orbit },
+];
+
+export const portfolioItems = [
+  {
+    name: "Private Clinic",
+    type: "Professional Website",
+    summary:
+      "A trust-first website for medical professionals with appointment flows, service breakdowns, and clear credibility cues.",
+    accent: "from-sky-400/70 via-blue-500/40 to-violet-500/25",
+  },
+  {
+    name: "Boutique Resort",
+    type: "Hotel & Booking Experience",
+    summary:
+      "A cinematic hospitality experience with premium visuals, room storytelling, and booking-oriented user journeys.",
+    accent: "from-fuchsia-400/60 via-violet-500/40 to-sky-400/25",
+  },
+  {
+    name: "City Radio",
+    type: "Radio Platform",
+    summary:
+      "A polished radio and media platform combining live playback, schedules, content sections, and brand depth.",
+    accent: "from-blue-400/70 via-cyan-400/35 to-pink-500/25",
   },
 ];
 
 export const processSteps = [
   {
     number: "01",
-    title: "Strategy",
+    title: "Discovery",
     description:
-      "We define the opportunity, shape the product story, and prioritize the systems that matter most.",
+      "We understand your business, audience, goals, and what a premium digital presence should communicate.",
   },
   {
     number: "02",
-    title: "Design",
+    title: "Planning",
     description:
-      "We create a refined visual language, interaction model, and interface architecture built for conversion.",
+      "We define the content structure, conversion path, features, and the right level of complexity for the project.",
   },
   {
     number: "03",
-    title: "Engineering",
+    title: "Design",
     description:
-      "We build with modern frontend, backend, AI, and cloud tooling while keeping the implementation clean and reusable.",
+      "We shape the look, motion, atmosphere, and interface details until the experience feels polished and distinct.",
   },
   {
     number: "04",
-    title: "Launch + Improve",
+    title: "Development",
     description:
-      "We deploy, monitor, and continue refining the system so the experience keeps compounding in value.",
+      "We build the site or system with clean code, strong performance, and responsive implementation across devices.",
+  },
+  {
+    number: "05",
+    title: "Launch",
+    description:
+      "We publish the finished product, optimize the details, and make sure the experience is ready for real visitors.",
+  },
+  {
+    number: "06",
+    title: "Ongoing Support",
+    description:
+      "We continue refining, maintaining, hosting, and expanding the platform as your business grows.",
   },
 ];
 
-export const workPreviews = [
-  {
-    name: "Atlas Commerce",
-    type: "Website + Automation",
-    summary:
-      "Luxury digital storefront with integrated ops automation and high-conversion funnels.",
-  },
-  {
-    name: "Northstar OS",
-    type: "Web App + AI",
-    summary:
-      "Operational dashboard combining analytics, AI assistance, and custom internal workflows.",
-  },
-  {
-    name: "Signal Voice",
-    type: "Voice Assistant",
-    summary:
-      "AI voice intake system handling qualification, routing, and scheduling with a human tone.",
-  },
+export const proofPoints = [
+  { label: "Business websites", icon: BriefcaseBusiness },
+  { label: "Portfolio websites", icon: Camera },
+  { label: "Booking systems", icon: BadgeCheck },
+  { label: "Restaurant websites", icon: Store },
+  { label: "Hotel websites", icon: ConciergeBell },
+  { label: "Radio platforms", icon: Radio },
+  { label: "Custom applications", icon: Activity },
+  { label: "AI assistants", icon: Stethoscope },
+  { label: "Automation systems", icon: Workflow },
+  { label: "Digital solutions", icon: Landmark },
 ];
