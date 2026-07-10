@@ -1,7 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Globe, Hotel, Scale, Sparkles, Stethoscope } from "lucide-react";
+import {
+  Building2,
+  Globe,
+  Hotel,
+  Scale,
+  Sparkles,
+  Stethoscope,
+  Store,
+} from "lucide-react";
 
 import { ButtonLink } from "@/components/landing/ButtonLink";
 import { heroHighlights, proofPoints } from "@/components/landing/content";
@@ -102,7 +110,7 @@ export function HeroSection({ pointer }: HeroSectionProps) {
 
         <div className="relative">
           <motion.div
-            className="absolute inset-0 rounded-[2.25rem] bg-[radial-gradient(circle_at_top,rgba(74,127,255,0.22),transparent_48%),radial-gradient(circle_at_bottom_right,rgba(212,90,255,0.18),transparent_38%),radial-gradient(circle_at_left,rgba(255,74,166,0.10),transparent_30%)] blur-2xl"
+            className="absolute inset-0 rounded-[2.25rem] bg-[radial-gradient(circle_at_top,rgba(74,127,255,0.24),transparent_48%),radial-gradient(circle_at_bottom_right,rgba(212,90,255,0.18),transparent_38%),radial-gradient(circle_at_left,rgba(255,74,166,0.12),transparent_30%)] blur-2xl"
             animate={{
               x: pointer.x * 12,
               y: pointer.y * 10,
@@ -113,8 +121,9 @@ export function HeroSection({ pointer }: HeroSectionProps) {
             initial={{ opacity: 0, y: 30, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1.05, delay: 0.26, ease: [0.22, 1, 0.36, 1] }}
-            className="relative overflow-hidden rounded-[2.4rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-5 shadow-[0_30px_100px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
+            className="relative overflow-hidden rounded-[2.4rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.09),rgba(255,255,255,0.03))] p-5 shadow-[0_30px_100px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-[28px]"
           >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_18%,rgba(113,166,255,0.12),transparent_26%),radial-gradient(circle_at_78%_78%,rgba(255,79,167,0.08),transparent_22%)]" />
             <div className="mb-4 flex items-center justify-between rounded-full border border-white/10 bg-white/[0.04] px-4 py-3">
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-pink-400" />
@@ -130,15 +139,15 @@ export function HeroSection({ pointer }: HeroSectionProps) {
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                className="rounded-[2rem] border border-white/10 bg-[linear-gradient(160deg,rgba(70,120,255,0.16),rgba(255,255,255,0.04),rgba(255,79,167,0.07))] p-5"
+                className="relative rounded-[2rem] border border-white/10 bg-[linear-gradient(160deg,rgba(70,120,255,0.16),rgba(255,255,255,0.04),rgba(255,79,167,0.07))] p-5"
               >
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.3em] text-sky-200/76">
-                      Featured website
+                      Website showcase
                     </p>
                     <h3 className="mt-2 text-xl font-semibold text-white">
-                      Luxury multi-device presence
+                      Premium business websites
                     </h3>
                   </div>
                   <Globe className="h-5 w-5 text-sky-200" />
@@ -146,15 +155,20 @@ export function HeroSection({ pointer }: HeroSectionProps) {
                 <div className="mt-6 space-y-4">
                   <div className="rounded-[1.7rem] border border-white/10 bg-[linear-gradient(160deg,rgba(255,255,255,0.18),rgba(255,255,255,0.05))] p-4">
                     <div className="mb-4 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-white/42">
-                      <span>Homepage concept</span>
+                      <span>Hotel website concept</span>
                       <span>Desktop</span>
                     </div>
                     <div className="rounded-[1.2rem] border border-white/10 bg-[#0a1628] p-4">
                       <div className="h-2 w-16 rounded-full bg-white/35" />
-                      <div className="mt-5 h-10 w-4/5 rounded-[1rem] bg-white/88" />
-                      <div className="mt-3 h-2.5 w-3/4 rounded-full bg-white/28" />
-                      <div className="mt-6 grid grid-cols-[1.1fr_0.9fr] gap-3">
-                        <div className="h-20 rounded-[1.2rem] bg-[linear-gradient(135deg,rgba(96,146,255,0.28),rgba(255,255,255,0.08))]" />
+                      <div className="mt-4 h-24 rounded-[1.2rem] bg-[linear-gradient(135deg,rgba(98,152,255,0.32),rgba(222,123,255,0.2),rgba(255,255,255,0.06))] p-4">
+                        <div className="text-[10px] uppercase tracking-[0.28em] text-white/48">
+                          Seaside retreat
+                        </div>
+                        <div className="mt-4 h-7 w-3/5 rounded-full bg-white/88" />
+                        <div className="mt-3 h-2.5 w-1/2 rounded-full bg-white/28" />
+                      </div>
+                      <div className="mt-4 grid grid-cols-[1.1fr_0.9fr] gap-3">
+                        <div className="h-16 rounded-[1.2rem] bg-[linear-gradient(135deg,rgba(96,146,255,0.16),rgba(255,255,255,0.08))]" />
                         <div className="grid gap-3">
                           <span className="h-8 rounded-xl bg-white/10" />
                           <span className="h-8 rounded-xl bg-white/10" />
@@ -165,10 +179,14 @@ export function HeroSection({ pointer }: HeroSectionProps) {
                   <div className="grid grid-cols-[0.72fr_0.28fr] gap-4">
                     <div className="rounded-[1.6rem] border border-white/10 bg-white/[0.05] p-4">
                       <div className="mb-3 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-white/42">
-                        <span>Hospitality</span>
-                        <Hotel className="h-3.5 w-3.5 text-pink-200/75" />
+                        <span>Restaurant site</span>
+                        <Store className="h-3.5 w-3.5 text-pink-200/75" />
                       </div>
-                      <div className="h-28 rounded-[1.2rem] bg-[linear-gradient(135deg,rgba(220,112,255,0.18),rgba(98,152,255,0.18),rgba(255,255,255,0.06))]" />
+                      <div className="h-28 rounded-[1.2rem] bg-[linear-gradient(135deg,rgba(220,112,255,0.18),rgba(98,152,255,0.18),rgba(255,255,255,0.06))] p-4">
+                        <div className="h-2 w-12 rounded-full bg-white/35" />
+                        <div className="mt-4 h-8 w-3/4 rounded-[0.9rem] bg-white/88" />
+                        <div className="mt-3 h-2 w-1/2 rounded-full bg-white/24" />
+                      </div>
                     </div>
                     <div className="rounded-[1.6rem] border border-white/10 bg-white/[0.05] p-3">
                       <div className="mb-3 text-[10px] uppercase tracking-[0.28em] text-white/42">
@@ -193,10 +211,10 @@ export function HeroSection({ pointer }: HeroSectionProps) {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-[11px] uppercase tracking-[0.3em] text-violet-200/75">
-                        Professional sectors
+                        Website types
                       </p>
                       <h3 className="mt-2 text-lg font-semibold text-white">
-                        Built for trust
+                        Designed for trust
                       </h3>
                     </div>
                     <Sparkles className="h-5 w-5 text-violet-200" />
@@ -206,6 +224,7 @@ export function HeroSection({ pointer }: HeroSectionProps) {
                       { label: "Clinics & healthcare", icon: Stethoscope },
                       { label: "Law firms & professionals", icon: Scale },
                       { label: "Hotels & restaurants", icon: Hotel },
+                      { label: "Real estate & business sites", icon: Building2 },
                     ].map((line) => {
                       const Icon = line.icon;
 
@@ -230,15 +249,30 @@ export function HeroSection({ pointer }: HeroSectionProps) {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-[11px] uppercase tracking-[0.3em] text-pink-200/72">
-                        Growth services
+                        Supporting systems
                       </p>
                       <h3 className="mt-2 text-lg font-semibold text-white">
-                        Beyond the website
+                        Built around the website
                       </h3>
                     </div>
-                    <ArrowUpRight className="h-5 w-5 text-pink-200" />
+                    <Globe className="h-5 w-5 text-pink-200" />
                   </div>
-                  <div className="mt-5 space-y-3">
+                  <div className="mt-5 rounded-[1.45rem] border border-white/10 bg-black/15 p-4">
+                    <div className="mb-4 flex items-center justify-between text-[10px] uppercase tracking-[0.28em] text-white/42">
+                      <span>Law firm website</span>
+                      <Scale className="h-3.5 w-3.5 text-sky-200/75" />
+                    </div>
+                    <div className="rounded-[1.15rem] border border-white/10 bg-[#09111f] p-4">
+                      <div className="h-2 w-12 rounded-full bg-white/32" />
+                      <div className="mt-4 h-7 w-2/3 rounded-full bg-white/86" />
+                      <div className="mt-3 h-2 w-3/4 rounded-full bg-white/22" />
+                      <div className="mt-5 grid gap-3">
+                        <span className="h-10 rounded-[1rem] bg-white/8" />
+                        <span className="h-10 rounded-[1rem] bg-white/8" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 space-y-3">
                     {[
                       "Custom web applications",
                       "AI assistants",

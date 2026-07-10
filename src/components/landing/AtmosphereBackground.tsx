@@ -44,13 +44,15 @@ export function AtmosphereBackground({ pointer }: AtmosphereBackgroundProps) {
         }
         transition={{ type: "spring", stiffness: 32, damping: 20, mass: 0.9 }}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(45,94,255,0.22),transparent_34%),radial-gradient(circle_at_80%_15%,rgba(165,74,255,0.14),transparent_24%),radial-gradient(circle_at_18%_74%,rgba(255,71,168,0.12),transparent_22%),linear-gradient(180deg,#06111f_0%,#081222_40%,#070d19_100%)]" />
-        <div className="absolute left-[10%] top-[22%] h-[30rem] w-[30rem] rounded-full bg-sky-500/10 blur-[140px]" />
-        <div className="absolute right-[8%] top-[8%] h-[24rem] w-[24rem] rounded-full bg-violet-500/10 blur-[120px]" />
-        <div className="absolute left-[42%] top-[58%] h-[26rem] w-[26rem] rounded-full bg-pink-500/8 blur-[120px]" />
-        <div className="absolute left-[28%] top-[36%] h-[20rem] w-[20rem] rounded-full bg-sky-400/8 blur-[120px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_12%,rgba(58,103,255,0.26),transparent_28%),radial-gradient(circle_at_80%_16%,rgba(165,74,255,0.16),transparent_24%),radial-gradient(circle_at_18%_74%,rgba(255,71,168,0.14),transparent_22%),radial-gradient(circle_at_52%_40%,rgba(113,166,255,0.12),transparent_24%),linear-gradient(180deg,#06111f_0%,#081222_38%,#070d19_100%)]" />
+        <div className="absolute left-[10%] top-[22%] h-[30rem] w-[30rem] rounded-full bg-sky-500/12 blur-[150px]" />
+        <div className="absolute right-[8%] top-[8%] h-[24rem] w-[24rem] rounded-full bg-violet-500/12 blur-[130px]" />
+        <div className="absolute left-[42%] top-[58%] h-[26rem] w-[26rem] rounded-full bg-pink-500/10 blur-[130px]" />
+        <div className="absolute left-[28%] top-[36%] h-[20rem] w-[20rem] rounded-full bg-sky-400/10 blur-[130px]" />
+        <div className="absolute right-[22%] top-[46%] h-[22rem] w-[22rem] rounded-full bg-blue-400/8 blur-[140px]" />
         <div className="absolute left-[-8%] top-[6%] h-[140%] w-[22rem] rotate-12 bg-[linear-gradient(90deg,transparent,rgba(122,173,255,0.06),transparent)] blur-3xl" />
         <div className="absolute right-[8%] top-[-10%] h-[120%] w-[16rem] -rotate-12 bg-[linear-gradient(90deg,transparent,rgba(197,116,255,0.05),transparent)] blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_12%,rgba(255,255,255,0.04),transparent_18%),radial-gradient(circle_at_72%_52%,rgba(255,255,255,0.025),transparent_16%)]" />
         <motion.div
           className="absolute left-[14%] top-[18%] h-[70%] w-40 rotate-[22deg] bg-[linear-gradient(90deg,transparent,rgba(130,186,255,0.08),transparent)] blur-3xl"
           animate={reduceMotion ? undefined : { x: [0, 60, 0], opacity: [0.2, 0.45, 0.2] }}
@@ -124,6 +126,7 @@ export function AtmosphereBackground({ pointer }: AtmosphereBackgroundProps) {
       ))}
 
       <div className="absolute inset-0 opacity-[0.12] [background-image:radial-gradient(rgba(255,255,255,0.9)_0.5px,transparent_0.5px)] [background-size:22px_22px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.015),transparent)] opacity-60" />
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(7,13,25,0.05),rgba(7,13,25,0.3)_30%,rgba(7,13,25,0.72)_70%,rgba(7,13,25,0.94))]" />
     </div>
   );
