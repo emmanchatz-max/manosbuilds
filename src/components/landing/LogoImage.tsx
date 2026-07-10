@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
-const logoPath = "/client-assets/logos/manosbuilds-logo.png";
+import logoImage from "../../../public/client-assets/logos/manosbuilds-logo.png";
 
 type LogoImageProps = {
   className?: string;
@@ -27,11 +28,14 @@ export function LogoImage({ className, textClassName }: LogoImageProps) {
 
   return (
     <>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={logoPath}
+      <Image
+        src={logoImage}
         alt="Manos Builds logo"
+        width={1024}
+        height={683}
+        sizes="(max-width: 640px) 176px, (max-width: 1024px) 232px, 288px"
         className={className}
+        priority
         onError={() => setHasError(true)}
       />
     </>
