@@ -15,10 +15,10 @@ export function LogoImage({ className, textClassName }: LogoImageProps) {
   if (hasError) {
     return (
       <div className={textClassName}>
-        <span className="block text-base font-semibold uppercase tracking-[0.2em] text-white sm:text-[1.05rem]">
+        <span className="block text-lg font-semibold uppercase tracking-[0.18em] text-white sm:text-[1.15rem]">
           Manos Builds
         </span>
-        <span className="mt-1 block text-[10px] uppercase tracking-[0.28em] text-white/48 sm:text-[11px]">
+        <span className="mt-1 block text-[10px] uppercase tracking-[0.24em] text-white/48 sm:text-[11px]">
           Premium websites and digital experiences
         </span>
       </div>
